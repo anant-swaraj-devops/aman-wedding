@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman ❤️ Gayatri | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf6f0;
+    color:#2f2f2f;
+    overflow-x:hidden;
+}
+
+:root{
+    --gold:#c8a25d;
+    --dark:#1f1a17;
+    --cream:#fff8ef;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url('couple1.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+    padding:20px;
+}
+
+.invitation-tag{
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-size:.9rem;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Cinzel', serif;
+    font-size:clamp(3rem,8vw,6rem);
+    font-weight:700;
+    line-height:1.1;
+}
+
+.hero h2{
+    font-family:'Cinzel', serif;
+    margin-top:15px;
+    font-size:clamp(1.4rem,4vw,2rem);
+    color:#f4d08a;
+    font-weight:400;
+}
+
+.hero p{
+    margin-top:25px;
+    font-size:1.1rem;
+    opacity:.95;
+}
+
+/* Decorative Divider */
+
+.divider{
+    text-align:center;
+    font-size:2rem;
+    color:var(--gold);
+    margin:60px 0;
+}
+
+/* General Section */
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-family:'Cinzel', serif;
+    font-size:2.6rem;
+    color:var(--dark);
+}
+
+.section-title p{
+    color:#777;
+    margin-top:10px;
+}
+
+/* Couple Section */
+
+.couple-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.photo-box{
+    position:relative;
+}
+
+.photo-box img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+}
+
+.photo-box::after{
+    content:"";
+    position:absolute;
+    top:20px;
+    left:20px;
+    right:-20px;
+    bottom:-20px;
+    border:2px solid var(--gold);
+    border-radius:18px;
+    z-index:-1;
+}
+
+.story-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.story-card h3{
+    font-family:'Cinzel', serif;
+    font-size:2.2rem;
+    margin-bottom:15px;
+    color:var(--dark);
+}
+
+.story-card p{
+    line-height:1.9;
+}
+
+/* Family Cards */
+
+.family-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.family-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-top:4px solid var(--gold);
+}
+
+.family-card h3{
+    font-family:'Cinzel', serif;
+    color:var(--dark);
+    margin-bottom:20px;
+    font-size:1.8rem;
+}
+
+.family-card p{
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+/* Quote */
+
+.quote-section{
+    background:linear-gradient(135deg,#1b1715,#342a25);
+    color:white;
+    text-align:center;
+}
+
+.quote{
+    max-width:900px;
+    margin:auto;
+}
+
+.quote h2{
+    font-family:'Cinzel', serif;
+    font-size:2.4rem;
+    line-height:1.5;
+}
+
+.quote p{
+    margin-top:20px;
+    color:#d4b36e;
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Footer */
+
+.footer{
+    background:#151515;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.footer h2{
+    font-family:'Cinzel', serif;
+    font-size:2.8rem;
+    margin-bottom:20px;
+}
+
+.footer p{
+    margin-bottom:10px;
+    opacity:.9;
+}
+
+.blessing{
+    color:#d2b16d;
+    margin-top:25px;
+}
+
+/* Floating Ornament */
+
+.ornament{
+    font-size:2rem;
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+@media(max-width:900px){
+
+    .couple-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        height:350px;
+    }
+
+    section{
+        padding:70px 7%;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="invitation-tag">Wedding Invitation</div>
+
+        <h1>Aman Swaraj</h1>
+
+        <h2>&</h2>
+
+        <h1>Gayatri Kumari</h1>
+
+        <p>
+            Together with their families,<br>
+            request the honour of your gracious presence
+            and blessings as they begin a beautiful journey of love and companionship.
+        </p>
+    </div>
+</section>
+
+<section>
+
+    <div class="section-title">
+        <div class="ornament">❁</div>
+        <h2>A Sacred Union</h2>
+        <p>Two hearts, two families, one beautiful beginning.</p>
+    </div>
+
+    <div class="couple-wrapper">
+
+        <div class="photo-box">
+            <img src="couple2.jpg" alt="Couple">
+        </div>
+
+        <div class="story-card">
+            <h3>With Divine Blessings</h3>
+
+            <p>
+                In the presence of our loved ones and under the blessings of the Almighty,
+                we joyfully celebrate the union of Aman Swaraj and Gayatri Kumari.
+                Your presence will make this occasion even more memorable and cherished.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<section>
+
+    <div class="section-title">
+        <div class="ornament">❁</div>
+        <h2>The Families</h2>
+    </div>
+
+    <div class="family-grid">
+
+        <div class="family-card">
+            <h3>The Groom</h3>
+
+            <p><strong>Name:</strong> Aman Swaraj</p>
+            <p><strong>Father:</strong> Umesh Prasad Sahu</p>
+            <p><strong>Mother:</strong> Sarita Devi</p>
+            <p><strong>Residence:</strong> Bada Chowk, Main Road, Rajdhanwar</p>
+        </div>
+
+        <div class="family-card">
+            <h3>The Bride</h3>
+
+            <p><strong>Name:</strong> Gayatri Kumari</p>
+            <p><strong>Father:</strong> Mahendra Prasad Sahu</p>
+            <p><strong>Mother:</strong> Kiran Gupta</p>
+            <p><strong>Residence:</strong> Birni, Bokaro</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quote-section">
+
+    <div class="quote">
+
+        <div class="ornament">🕉</div>
+
+        <h2>
+            “Where there is love, there is life.
+            Where there is trust, there is forever.”
+        </h2>
+
+        <p>
+            Seeking your blessings as we begin our new journey together.
+        </p>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="section-title">
+        <div class="ornament">❁</div>
+        <h2>Memories in Bloom</h2>
+    </div>
+
+    <div class="gallery">
+
+        <img src="couple1.jpg" alt="Couple Image 1">
+        <img src="couple2.jpg" alt="Couple Image 2">
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <h2>Aman ❤️ Gayatri</h2>
+
+    <p>
+        With immense joy, we invite you to celebrate our special day
+        and shower us with your blessings.
+    </p>
+
+    <div class="blessing">
+        ॐ मंगलम् भगवान विष्णु ।<br>
+        मंगलम् गरुड़ध्वजः ॥
+    </div>
+
+</footer>
+
+</body>
+</html>
