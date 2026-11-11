@@ -230,38 +230,31 @@
             gap: clamp(42px, 8vw, 100px);
         }
 
-        .story-emblem {
+        .couple-photo {
             position: relative;
-            display: grid;
-            width: min(100%, 420px);
-            aspect-ratio: 4 / 5;
-            place-items: center;
+            width: min(100%, 500px);
             justify-self: center;
-            overflow: hidden;
+            margin: 0;
+            padding: 14px;
             border: 1px solid var(--gold);
-            background:
-                radial-gradient(circle at center, rgba(255, 253, 249, .85) 0 20%, transparent 20.5%),
-                url("./couple2.jpg") center / cover no-repeat;
+            background: var(--paper);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
         }
 
-        .story-emblem::before {
+        .couple-photo::before {
             position: absolute;
-            inset: 14px;
-            border: 1px solid rgba(255, 253, 249, .75);
+            inset: 7px;
+            border: 1px solid rgba(197, 155, 85, .55);
             content: "";
+            pointer-events: none;
         }
 
-        .story-emblem span {
-            position: relative;
-            display: grid;
-            width: 118px;
-            aspect-ratio: 1;
-            place-items: center;
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-            background: rgba(255, 253, 249, .88);
-            color: var(--maroon);
-            font-size: 3.4rem;
+        .couple-photo img {
+            display: block;
+            width: 100%;
+            max-height: 570px;
+            object-fit: contain;
+            object-position: center;
         }
 
         .story-copy {
@@ -682,7 +675,9 @@
                     <p>Two hearts, two families, one beautiful beginning.</p>
                 </div>
                 <div class="story-layout">
-                    <div class="story-emblem" aria-hidden="true"><span>ॐ</span></div>
+                    <figure class="couple-photo">
+                        <img src="./couple1.jpg" alt="Aman Swaraj and Gayatri Kumari together" loading="lazy">
+                    </figure>
                     <div class="story-copy">
                         <p class="small-label">With divine blessings</p>
                         <h3>A day made brighter by your presence</h3>
